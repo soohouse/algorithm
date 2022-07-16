@@ -1,9 +1,9 @@
-package seletion;
+package selection;
 
 import java.util.Arrays;
 
 public class SelectionSort {
-	
+
 	public static void sort(int[] arr) {
 		
 		for(int i=0; i<arr.length; i++) {
@@ -16,25 +16,28 @@ public class SelectionSort {
 					minIndex = j;
 				}
 			}
-			
+						
 			swap(arr, minIndex, i);
-			
 		}
+		
 	}
 	
 	public static void swap(int[] arr, int i, int j) {
 		int temp = arr[i];
 		arr[i] = arr[j];
-		arr[j] = arr[temp];
+		arr[j] = temp;
 	}
-
+	
+	
 	public static void main(String[] args) {
-		
+
 		int[] arr = {33, 11, 99, 1, 22, 88, 55, 44, 66, 77};
+		
 		sort(arr);
 		
 		System.out.println("정렬 후: " + Arrays.toString(arr));
 
+		
 	}
 
 }
