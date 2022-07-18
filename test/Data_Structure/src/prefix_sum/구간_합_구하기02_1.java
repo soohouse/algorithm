@@ -3,7 +3,7 @@ package prefix_sum;
 import java.util.Scanner;
 
 public class 구간_합_구하기02_1 {
-
+	
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
@@ -11,7 +11,7 @@ public class 구간_합_구하기02_1 {
 		int N = sc.nextInt(), M = sc.nextInt();
 		int[][] A = new int[N][N];
 		
-		//원본 배열A 채우기
+		//원본 배열 A 채우기
 		for(int i=0; i<N; i++) {
 			for(int j=0; j<N; j++) {
 				A[i][j] = sc.nextInt();
@@ -33,9 +33,29 @@ public class 구간_합_구하기02_1 {
 			int x2 = sc.nextInt();
 			int y2 = sc.nextInt();
 			
-			System.out.println(D[x2][y2] - D[x1-1][y2] - D[x2][y1-1]  );//?!
+			System.out.println(D[x2][y2] - D[x1-1][y2] - D[x2][y1-1] + D[x1-1][y1-1]);
 		}
+		
 		sc.close();
+		
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
